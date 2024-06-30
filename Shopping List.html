@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping List</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            background-image: url("C:/apache-tomcat-8.5.96/webapps/SERVLET/Assets/Groceries.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            position: relative; /* Added for positioning the logout button */
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+        li {
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        li:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .logout-link {
+            position: fixed; /* Position it fixed to stay at the bottom right */
+            bottom: 20px; /* Adjust bottom position */
+            right: 20px; /* Adjust right position */
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #4CAF50; /* Green background color */
+            padding: 14px 20px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .logout-link:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Shopping List</h1>
+        <ul id="shopping-list">
+            <li>Rice 10 Kg</li>
+            <li>Tomato 1 Kg</li>
+            <li>Olive Oil 5 Litres</li>
+            <li>Wheat 10 Kg</li>
+            <li>Ghee 500 Grams</li>
+        </ul>
+
+        <!-- Logout button -->
+        <a href="#" id="logout-button" class="logout-link">Logout</a>
+    </div>
+
+    <script>
+        // Logout button functionality
+        document.getElementById('logout-button').addEventListener('click', function(event) {
+            // Redirect to the login page
+            window.location.href = "Shopping List.html"; // Change "logout.php" to your logout endpoint
+        });
+    </script>
+</body>
+</html>
