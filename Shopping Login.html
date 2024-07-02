@@ -65,7 +65,7 @@
   }
 
   .login-container input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #3b8c3a; /* Changed to a more appealing color */
   }
 
   /* Style for the signup button */
@@ -78,10 +78,12 @@
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
   }
 
   .signup-button:hover {
-    background-color: #0056b3;
+    background-color: #3b8c3a; /* Changed to a more appealing color */
   }
 </style>
 </head>
@@ -89,13 +91,13 @@
 
 <div class="login-container">
   <h2>Login</h2>
-  <form action="/login" method="post">
+  <form action="Login Check.php" method="post">
     <input type="text" id="username" name="username" placeholder="Username" required><br>
     <input type="password" id="password" name="password" placeholder="Password" required><br>
     <input type="submit" value="Login">
   </form>
   
-  <p>Don't have an account? <button class="signup-button" onclick="window.location.href='Shopping Signup.html';">Sign Up</button></p>
+  <p>Don't have an account? <a class="signup-button" href="Shopping Signup.html">Sign Up</a></p>
 </div>
 
 </body>
