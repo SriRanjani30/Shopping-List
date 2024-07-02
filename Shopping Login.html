@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right bottom, #4b6cb7, #182848);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .login-container {
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 40px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .login-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+
+  .login-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .login-container input[type="text"],
+  .login-container input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+
+  .login-container input[type="text"]:focus,
+  .login-container input[type="password"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+
+  .login-container input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  .login-container input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  /* Style for the signup button */
+  .signup-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  .signup-button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+
+<div class="login-container">
+  <h2>Login</h2>
+  <form action="/login" method="post">
+    <input type="text" id="username" name="username" placeholder="Username" required><br>
+    <input type="password" id="password" name="password" placeholder="Password" required><br>
+    <input type="submit" value="Login">
+  </form>
+  
+  <p>Don't have an account? <button class="signup-button" onclick="window.location.href='Shopping Signup.html';">Sign Up</button></p>
+</div>
+
+</body>
+</html>
