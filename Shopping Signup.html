@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #ff9966, #ff5e62); /* Gradient background */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .form-container {
+        max-width: 400px;
+        width: 100%;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .form-container:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    h2 {
+        color: #333;
+        margin-bottom: 20px;
+    }
+    input {
+        width: calc(100% - 20px);
+        padding: 12px;
+        margin: 10px 0;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+    }
+    input:focus {
+        border-color: #4CAF50;
+        outline: none;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px; /* Same padding for both buttons */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        margin-top: 10px; /* Added margin for spacing */
+    }
+    button:hover {
+        background-color: #3b8c3a; /* Changed to a more appealing color */
+    }
+
+    /* Adjust the padding for the Submit button to match the Login button */
+    button:nth-of-type(2) {
+        padding: 12px 20px; /* Same padding as the Login button */
+    }
+</style>
+</head>
+<body>
+<div class="form-container">
+    <form id="signupForm" action="Shopping Signup.php" method="post">
+        <h2>Sign Up</h2>
+        <input type="text" id="username" name="username" placeholder="Username" required><br>
+        <input type="email" id="email" name="email" placeholder="Email" required><br>
+        <input type="password" id="password" name="password" placeholder="Password" required><br>
+        <button type="submit">Submit</button>
+    </form>
+    <p>Already have an account? <button onclick="redirectToLogin()">Login</button></p>
+</div>
+
+<script>
+    function redirectToLogin() {
+        window.location.href = "Shopping Login.html";
+    }
+</script>
+</body>
+</html>
