@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
-            background-image: url("C:/apache-tomcat-8.5.96/webapps/SERVLET/Assets/Groceries.jpg");
+            background-image: url("Images/Groceries.jpg");
             background-size: cover;
             background-position: center;
             transition: background-color 0.5s ease;
@@ -61,6 +61,20 @@
         li:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .delete-button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            margin-left: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            float: right;
+        }
+        .delete-button:hover {
+            background-color: #c0392b;
         }
         .add-item-container {
             text-align: center;
@@ -151,11 +165,11 @@
         <h1>Shopping List</h1>
         <ul id="shopping-list">
             <!-- Shopping list items will be dynamically added here from the database -->
-            <li>Rice 10 Kg</li>
-            <li>Tomato 1 Kg</li>
-            <li>Olive Oil 5 Litres</li>
-            <li>Wheat 10 Kg</li>
-            <li>Ghee 500 Grams</li>
+            <li>Rice 10 Kg <button class="delete-button">Delete</button></li>
+            <li>Tomato 1 Kg <button class="delete-button">Delete</button></li>
+            <li>Olive Oil 5 Litres <button class="delete-button">Delete</button></li>
+            <li>Wheat 10 Kg <button class="delete-button">Delete</button></li>
+            <li>Ghee 500 Grams <button class="delete-button">Delete</button></li>
         </ul>
         <div class="add-item-container">
             <form id="add-item-form" class="add-item-form">
@@ -205,8 +219,13 @@
             }
 
             var newItem = document.createElement('li');
-            newItem.textContent = itemName + (quantity ? ' ' + quantity : ''); // Include quantity if provided
+            newItem.innerHTML = itemName + (quantity ? ' ' + quantity : '') + ' <button class="delete-button">Delete</button>';
             document.getElementById('shopping-list').appendChild(newItem);
+
+            // Add delete functionality to the new delete button
+            newItem.querySelector('.delete-button').addEventListener('click', function() {
+                newItem.remove();
+            });
 
             // Clear input fields
             itemInput.value = '';
@@ -222,10 +241,17 @@
             }, 10);
         });
 
+        // Add delete functionality to existing delete buttons
+        document.querySelectorAll('.delete-button').forEach(function(button) {
+            button.addEventListener('click', function() {
+                button.parentElement.remove();
+            });
+        });
+
         // Logout button functionality
         document.getElementById('logout-button').addEventListener('click', function(event) {
             // Redirect to the login page
-            window.location.href = "Shopping List.html";
+            window.location.href = "logout.html";
         });
     </script>
 </body>
