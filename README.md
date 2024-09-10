@@ -16,7 +16,9 @@ I have created a shopping list managing website with local user authentication. 
 8. create a table named "signup" and add three coloumns namely "Username", "Password", "Email".
 9. Execute queries and check whether the table and coloums are created or not.
 10. once created open Xampp server and start Apache and MySQL server.
-11. open the web browser and type "localhost/Shopping Signup.html"
+11. open the web browser and type "localhost/index.html"
 12. Now you are ready to create your user credentials and login to the shopping list website.
 13. Please make sure that mySQL server is running properly in the background.
 ![Screenshot (3520)](https://github.com/user-attachments/assets/36f60a66-8358-443e-9e2e-b6e71ee9f36a)
+
+https://sriranjani30.github.io/Shopping-List/
